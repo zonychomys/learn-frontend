@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>04-nav</title>
+  <style>
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td {
+        margin: 0;
+        padding: 0;
+    }
+    .navbar {
+      border-bottom: 1px solid #eee;
+      background-color: #eee;
+      height: 50px;
+      box-sizing: border-box;
+    }
+    .navbar-list {
+      list-style: none;
+    }
+    .navbar-item {
+      float: left;
+      padding: 0px 10px 0px 10px;;
+      box-sizing: border-box;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      cursor: pointer;
+      width: 100px;
+      font-family: "Consolas","WenQuanYi MicroHei","Microsoft YaHei",sans-serif;
+      font-size: 15px;
+    }
+    .hide {
+      display: none;
+    }
+    .content-item {
+      font-family: "Consolas","WenQuanYi MicroHei","Microsoft YaHei",sans-serif;
+      font-size: 14px;
+      padding: 50px;
+    }
+    .selected {
+      background-color: #fff;
+      color: #00a2ca;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <div class="navbar-menu">
+        <ul class="navbar-list">
+          <li class="navbar-item selected" type="activity">最新活动</li>
+          <li class="navbar-item" type="product">云产品</li>
+          <li class="navbar-item" type="solution">解决方案</li>
+        </ul>
+      </div>
+    </div>
+  </header>
+  <div class="content">
+    <div class="content-item" type="activity">独享主机新品低至0.8元/天 ，仅需298元/年！</div>
+    <div class="content-item hide" type="product">云服务器 ECS 对象存储 OSS DDoS高防IP 域名注册 DataV 数据可视化</div>
+    <div class="content-item hide" type="solution">针对各行业业务特性，打造个性化行业解决方案，为用户提供一站式的产品与服务。包括新零售、新金融、新能源、新技术、大健康、大制造、大传媒等行业领域。</div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+  $(function() {
+    $(".navbar-item").click(function() {
+      $(this).addClass("selected").siblings().removeClass("selected");
+      type = $(this).attr("type");
+      $(".content").find("div[type='" + type + "']").show(50).siblings().hide(50)
+    });
+  })
+  </script>
+</body>
+</html>

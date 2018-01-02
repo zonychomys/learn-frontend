@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>09_获取并修改标签属性</title>  
+    </head>
+    <body>
+        <div id='1' name='n1'>内容</div>
+        
+        <script type='text/javascript'>
+            // 通过id选择器匹配标签
+            var tag_id_1 = document.getElementById('1');
+            console.log(tag_id_1.getAttribute('name'));
+            tag_id_1.setAttribute('name','n2');
+            console.log(tag_id_1.getAttribute('name'));
+            
+            // 与例5不同,使用如下方式不会生效
+            //tag_id_1.name = 'n3'
+            //console.log(tag_id_1.getAttribute('name'));
+        </script>
+    </body>
+</html>

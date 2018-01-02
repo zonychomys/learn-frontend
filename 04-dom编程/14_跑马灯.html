@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>李骥阳是老母猪~长着猪~屁~股~&nbsp;&nbsp;</title>
+        <link rel="shortcut icon" href="image/pipi.png" type="image/x-icon"/>
+    </head>
+    <body>
+        <script>
+            function loop(){
+                // 获取title内容
+                var title = document.title;
+                // 获取title首字符
+                var first_char = title.charAt(0);
+                // 将title首字符拼接至title剩余字符尾部
+                document.title = title.substring(1, title.length) + first_char;
+                console.log(title);
+                console.log(document.title);
+            }
+            
+            setInterval('loop()', 500);
+        </script>
+    </body>
+</html>

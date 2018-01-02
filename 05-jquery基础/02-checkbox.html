@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>02-checkbox</title>
+  <style>
+  </style>
+</head>
+<body>
+  <div id="checklist">
+    <input type="checkbox" name="host" value="m0">
+    <input type="checkbox" name="host" value="m1">
+    <input type="checkbox" name="host" value="m2">
+    <input id="all" type="button" value="全选">
+    <input id="none" type="button" value="全不选">
+    <input id="reverse" type="button" value="反选">
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+    $(function() {
+      $("#all").click(function() {
+        $("#checklist :checkbox").prop("checked", true)
+      })
+    })
+    $(function() {
+      $("#none").click(function() {
+        $("#checklist :checkbox").prop("checked", false)
+      })
+    })
+    $(function() {
+      $("#reverse").click(function() {
+        $("#checklist :checkbox").each(function() {
+          $(this).prop("checked", !$(this).prop("checked"))
+        })
+      })
+    })
+  </script>
+</body>
+</html>

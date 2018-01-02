@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>10_匹配form标签并提交表单</title>  
+    </head>
+    <body>
+        <!-- 原始表单提交方式
+        <form action=https://www.baidu.com/s method='GET'>
+            <input type='text' name='wd'/>
+            <input type='submit' value='提交'>
+        </form>
+        <script type='text/javascript'>
+        -->
+        
+        <form id='1' action=https://www.baidu.com/s method='GET'>
+            <input type='text' name='wd'/>
+            <!--  onclick作为事件,在网页点击提交时触发之后定义的函数  -->
+            <input type='button' value='伪提交' onclick='Foo();'>
+        </form>
+        <script>
+            function Foo() {
+                document.getElementById('1').submit();
+            }
+        </script>
+    </body>
+</html>

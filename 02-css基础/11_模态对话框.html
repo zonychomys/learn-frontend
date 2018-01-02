@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>11_模态对话框</title>
+        <style>
+            .shade{
+                position:fixed;
+                top:0;
+                right:0;
+                bottom:0;
+                left:0;
+                background-color:#333;
+                opacity:0.6;
+                z-index:0;
+            }
+            .delete{
+                position:fixed;
+                top:50%;
+                left:50%;
+                width:200px;
+                height:150px;
+                background-color:white;
+                margin-left:-100px;
+                margin-top:-75px;
+                z-index:1;
+            }
+        </style>
+    </head>
+    <body>
+        <!--  创建一个表格  -->
+        <table>
+            <tr>
+                <th>IP</th>
+                <th>编辑</th>
+            </tr>
+            <tr>
+                <td>11.11.11.11</td>
+                <td>删除</td>
+            </tr>
+            <tr>
+                <td>11.11.11.12</td>
+                <td>删除</td>
+            </tr>
+            <tr>
+                <td>11.11.11.13</td>
+                <td>删除</td>
+            </tr>
+            <tr>
+                <td>11.11.11.14</td>
+                <td>删除</td>
+            </tr>
+            
+            <!--  定义一个全屏幕的半透明fixed用作底色阴影,z-index表示其位于图层的最底层  -->
+            <div class='shade'></div>
+            
+            <!--  定义一个指定宽度的弹出对话框,z-index表示其位于shade图层之上  -->
+            <div class='delete'>
+                <div>提示</div>
+                <div>确定要删除?</div>
+                <div>
+                    <input type='button' value='取消'>
+                    <input type='button' value='确定'>
+                </div>
+            </div>
+        </table>
+    </body>
+</html>

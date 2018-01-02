@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>01-返回顶部</title>
+  <style>
+    .goTop {
+      position: fixed;
+      right: 40px;
+      bottom: 50px;
+      width: 28px;
+      height: 46px;
+      background-image: url(http://www.lgstatic.com/www/static/common/widgets/footer_c/modules/img/backtop-new_0e4bcbc.png);
+      background-position: 28px 0px;
+      display: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div style="height:5000px;"></div>
+  <div class="goTop"></div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+    $(function() {
+      $(".goTop").hide()
+      $(window).scroll(function() {
+        if ($(this).scrollTop() > 0) {
+          //$(".goTop").removeClass("hide");
+          $(".goTop").show()
+        } else {
+          //$(".goTop").addClass("hide");
+          $(".goTop").hide()
+        }
+      })
+      $(".goTop").click(function() {
+        $("body,html").animate({scrollTop:0}, "fast")
+      })
+    })
+  </script>
+</body>
+</html>

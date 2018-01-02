@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>02_dom选择器之innertext与innerhtml属性区别</title>  
+    </head>
+    <body>
+        <div id='1'><p>修改前内容</p></div>
+        
+        <script type='text/javascript'>
+            // innerText属性定义网页元素的文本内容,而innerHTML用于定义网页元素的内部标签代码
+            var tag_id_1 = document.getElementById('1');
+            console.log(tag_id_1.innerText);
+            console.log(tag_id_1.innerHTML);
+            // 以下二选一,对比输出结果
+            //tag_id_1.innerText = '<p>修改后内容</p>';
+            //tag_id_1.innerHTML = '<p>修改后内容</p>';
+        </script>
+    </body>
+</html>

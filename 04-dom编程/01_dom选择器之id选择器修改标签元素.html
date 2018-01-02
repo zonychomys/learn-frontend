@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>01_dom选择器之id选择器</title>  
+    </head>
+    <body>
+        <div id='1'>修改前内容</div>
+        
+        <script type='text/javascript'>
+            // id选择器,通过如下方法获取某个匹配特定id的标签对象,并在之后修改标签对象属性
+            var tag_id_1 = document.getElementById('1');
+            console.log(tag_id_1.innerText);
+            tag_id_1.innerText = '修改后内容';
+            console.log(tag_id_1.innerText);
+        </script>
+    </body>
+</html>

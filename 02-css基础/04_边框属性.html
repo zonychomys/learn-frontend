@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>04_边框属性</title>  
+    </head>
+    <body>
+        <!--
+            border: 定义标签块边框的border-width,border-style,border-color属性,同时能够支持仅针对边框的top,bottom,left,right单独进行定义
+            border-width: 定义边框宽度
+            border-style: 定义边框样式, 可选值包括dashed|dotted|double|groove|hidden|inherit|initial|inset|none|outset|ridge|solid
+            border-color: 定义边框颜色
+        -->
+        <div style='border: 1px solid red;width:190px;height:40px'>archlinux</div> <br/>
+        <div style='border: 2px dotted red;border-top-style:solid;width:190px;height:40px'>archlinux</div> <br/>
+        
+        <!--
+            margin: 设置元素外边距属性,支持仅针对边框的top,bottom,left,right单独定义
+        -->
+        <div style='border: 1px solid red;background-color:gray;width:1920px;height:100px'>
+            <div style='background-color: yellow;width:100px;height:20px;margin:40px'>archlinux</div>
+        </div>
+        
+        <!--
+            padding: 设置元素内边距属性,支持仅针对边框的top,bottom,left,right单独定义
+        -->
+        <br/>
+        <div style='border: 1px solid red;background-color:gray;width:1920px;height:100px'>
+            <div style='background-color: yellow;width:100px;height:20px;padding:10px'>archlinux</div>
+        </div>
+    </body>
+</html>

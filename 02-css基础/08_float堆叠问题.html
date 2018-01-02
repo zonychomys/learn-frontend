@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>08_float堆叠问题</title>
+        <style>
+            .clearfix:after {
+                content: '.';
+                display: black;
+                height: 0px;
+                clear: both;
+                visibility: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <!--  在未使用float时,外部的div标签的背景色样式将被内部的div标签继承  -->
+        <div style="background-color:red;">
+            <div>div1</div>
+            <div>div2</div>
+        </div>
+        
+        <!--  在使用float后,外部的div标签的背景色样式将无法被内部的div标签继承  -->
+        <br/><br/>
+        <div style="background-color:red">
+            <div style="float:left;">div3</div>
+            <div style="float:left;">div4</div>
+        </div>
+        
+        <!--  解决办法1,实际测试发现使用该方法,其后的所有标签外内容都将被应用最外层背景色样式  -->
+        <!--
+        <br/><br/>
+        <div style="background-color:red;">
+            <div style="float:left;">div5</div>
+            <div style="float:left;">div6</div>
+            <div style="clear:both;">
+        </div>
+        <h1>asdf</h1>
+        -->
+        
+        <!--  解决办法2  见head标签内样式定义  -->
+        <br/><br/>
+        <div style="background-color:green;" class='clearfix'>
+            <div style="float:left;">div7</div>
+            <div style="float:left;">div8</div>
+        </div>
+        <p>xxxx</p>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>06_通过修改innerHTML修改标签内容</title>  
+    </head>
+    <body>
+        <div id='1'></div>
+        
+        <script type='text/javascript'>
+            // 创建一个a标签
+            var tag = "<a href='http://www.qq.com'>qq</a>";
+            // 通过id选择器匹配标签
+            var tag_id_1 = document.getElementById('1');
+            // 将新创建的标签添加为匹配的标签的子标签
+            tag_id_1.innerHTML = tag;
+        </script>
+    </body>
+</html>

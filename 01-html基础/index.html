@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--  声明网页内容类型元信息
+            content: 声明网页内容类型
+            charset: 声明网页内容编码
+        -->
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        
+        <!--  定义网页自动刷新属性
+            content: 定义网页自动刷新时间间隔
+        -->
+        <meta http-equiv="Refresh" content="120">
+        
+         <!--  定义网页自动刷新跳转属性
+            content: 定义网页自动刷新跳转时间间隔
+            Url: 定义跳转URL
+        -->
+        <meta http-equiv="Refresh" content="1200"; Url=https://www.archlinux.org/"/>
+        
+        <!--  定义网页描述信息,搜索引擎将使用该内容作为网站的描述信息
+            content: 定义网页描述信息
+        -->
+        <meta name="description" content="宝宝云,全球领先的云计算服务平台,云产品解决方案,">
+        
+        <!--  定义网页搜索关键字,搜索引擎将使用关键字内容作为网站的搜索条目
+            content: 定义网页关键字
+        -->
+        <meta name="keyword" content="宝宝云,云服务器,云主机,云存储,开放存储,数据库,RDS">
+        
+        <!--  定义网页标题栏  -->
+        <title>宝宝云-全球领先的云计算服务平台</title>
+    </head>
+    
+    <body>
+        <!--  使用<a>标签在当前窗口完成跳转  -->
+        <a href='https://wiki.archlinux.org/'>archlinux wiki</a>
+        <br/><br/>
+        
+        <!--  使用<a>标签并通过定义target属性在新窗口完成跳转  -->
+        <a href='https://www.archlinux.org/' target='_blank'>archlinux home page</a>
+        <br/><br/>
+        
+        <!--******************************************************************************************************-->
+        
+        <!--  
+            使用<a>标签href属性与<div>标签中的id建立关联关系,实现目录索引功能
+            并通过CSS调整高度&背景色样式
+        -->
+        <a href='#id1'>第一章</a><br/>
+        <a href='#id2'>第二章</a><br/>
+        <a href='#id3'>第三章</a><br/>
+        
+        <div id='id1' style='height:1024px; background-color:red;'>
+            <p>第一章内容</p>
+        </div>
+        
+        <div id='id2' style='height:1024px; background-color:blue;'>
+            <p>第二章内容</p>
+        </div>
+        
+        <div id='id3' style='height:1024px; background-color:green;'>
+            <p>第三章内容</p>
+        </div>
+        
+        <!--******************************************************************************************************-->
+        
+        <!--  <h>标签用于声明不同大小样式的标题,支持范围为1-6  -->
+        <h1>标题1</h1>
+        <h2>标题2</h2>
+        <h3>标题3</h3>
+        <h4>标题4</h4>
+        <h5>标题5</h5>
+        <h6>标题6</h6>
+        
+        <!--******************************************************************************************************-->
+        
+        <!--  <select>标签用于生成选择菜单  -->
+        <!--  生成列表菜单,selected用于声明选择的默认值  -->
+        <select>
+            <option value='1'>fedora</option>
+            <option value='2'>archlinux</option>
+            <option value='3' selected='selected'>centos</option>
+        </select>
+        <br/><br/>
+        
+        <!--  生成列表菜单,并通过size声明同时显示的条目数  -->
+        <select size="2">
+            <option>fedora</option>
+            <option>archlinux</option>
+            <option>centos</option>
+            <option>gentoo</option>
+            <option>ubuntu</option>
+        </select>
+        <br/><br/>
+        
+        <!--  通过multiple属性生成支持多选的列表菜单  -->
+        <select multiple='multiple' size="2">
+            <option>fedora</option>
+            <option>archlinux</option>
+            <option>centos</option>
+            <option>gentoo</option>
+            <option>ubuntu</option>
+        </select>
+        <br/><br/>
+        
+        <!--  生成带有层级结构的列表菜单  -->
+        <select>
+            <optgroup Label='gentoo'>
+                <option>funtoo</option>
+                <option>pentoo</option>
+            </optgroup>
+            <optgroup Label='archlinux'>
+                <option>manjaro</option>
+                <option>antergos</option> 
+            </optgroup>
+            <optgroup Label='debian'>
+                <option>ubuntu</option>
+                <option>kali</option>
+            </optgroup>
+        </select>
+        <br/><br/>
+        
+        <!--******************************************************************************************************-->
+        
+        <!--
+            <input>标签用于搜集用户希望提交的信息,其能够根据不同的type属性值创建如下多种输入形式
+            1. 文本域text
+            2. 密码域password
+            3. 复选框checkbox
+            4. 单选按钮radio
+            5. 事件触发按钮button,用于触发事件,如js操作
+            6. 表单提交按钮submit,用于提交表单仅用于与后台提交数据
+            7. 文件上传按钮file
+        -->
+        <!--  文本域text  -->
+        <input type='text'/>
+        <br/><br/>
+        
+        <!--  密码域password  -->
+        <input type='password'/>
+        <br/><br/>
+        
+        <!--  复选框checkbox  -->
+        <input type='checkbox'/>
+        <br/><br/>
+        
+        <!--  单选按钮radio  -->
+        fedora:    <input type='radio' name='distribution'/>
+        archlinux: <input type='radio' name='distribution'/>
+        centos:    <input type='radio' name='distribution'/>
+        <br/><br/>
+        
+        <!--  按钮button  -->
+        <input type='button' value='button提交'/>
+        <br/><br/>
+        
+        <!--  按钮submit  -->
+        <input type='submit' value='submit提交'/>
+        <br/><br/>
+        
+        <!--  按钮file  -->
+        <input type='file'/>
+        <br/><br/>
+        
+        <!--******************************************************************************************************-->
+        
+        <!--
+            <textarea>标签定义多行的文本输入控件,其定义的文本区中可容纳无限数量的文本
+            <textarea>标签定义多行的文本可以通过cols和rows属性来规定textarea的尺寸,不过更推荐的方法是采用CSS的height与width属性
+        -->
+        <textarea>default banner: </textarea>
+        <br/><br/>
+        
+        <!--******************************************************************************************************-->
+        
+        <!--
+            <form>标签用于为用户输入创建HTML表单,表单用于向服务器传输数据
+            表单能够包含input元素,比如文本字段,复选框,单选框,提交按钮等等
+            表单还可以包含menus,textarea,fieldset,legend以及label元素
+        -->
+        <form action='http://120.25.93.51/' method='POST'>
+        <!--  <form action='http://120.25.93.51/' enctype='multipart/form-data' method='POST'>  -->
+            name:<input name='username' type='text'/>
+            <br/>
+            pass:<input name='password' type='password'/>
+            <br/>
+            <input type='submit' value='提交'>
+        </form>
+        <br/><br/>
+        
+        <!--******************************************************************************************************-->
+        
+        <!--
+            <label>标签为input元素定义标注,其不会向用户呈现任何特殊的效果,而是用于为鼠标用户提供更好的交互
+            当用户选择该标签时,浏览器就会自动将焦点转到和标签相关的表单控件上
+            <label>标签的for属性应当与相关元素的id属性相同           
+        -->
+        <label for='xx'> name:<input id='xx' type='text'></label>
+        <br/><br/>
+        
+        <!--******************************************************************************************************-->
+        
+        <!--  <ul>标签用于定义无须列表  -->
+        <ul>
+            <li>fedora</li>
+            <li>archlinux</li>
+            <li>centos</li>
+        </ul>
+        
+        <!--  <ol>标签用于定义有序列表  -->
+        <ol>
+            <li>fedora</li>
+            <li>archlinux</li>
+            <li>centos</li>
+        </ol>
+        
+        <!--  <dl>标签用于结合定义列表中的项目并对其进行描述  -->
+        <dl>
+            <dt>gentoo</dt>
+                <dd>funtoo</dd>
+                <dd>pentoo</dd>
+            <dt>archlinux</dt>
+                <dd>manjaro</dd>
+                <dd>antergos</dd>
+        </dl>
+        
+        <!--******************************************************************************************************-->
+        
+        <!--
+            <table>标签定义HTML表格,简单的HTML表格由table元素以及一个或多个tr,th或td元素组成
+            tr元素定义表格行,th元素定义表头,而td元素定义表格单元
+            border属性用于定义是否显示行分隔符
+            <thead>与<tbody>标签用于显示的区分表格的头部与单元格信息
+            colspan与rowspan属性分别用于定义单元格可横跨的列数与行数
+        -->
+        <table>
+            <tr>
+                <td>IP</td>
+                <td>CPU</td>
+                <td>MEMORY</td>
+            </tr>
+            <tr>
+                <td>120.25.93.51</td>
+                <td>1核</td>
+                <td>1G</td>
+            </tr>
+            <tr>
+                <td>61.191.61.92</td>
+                <td>2核</td>
+                <td>4G</td>
+            </tr>
+        </table>
+        <br/>
+        
+        <table border='1'>
+            <tr>
+                <td>IP</td>
+                <td>CPU</td>
+                <td>MEMORY</td>
+            </tr>
+            <tr>
+                <td>120.25.93.51</td>
+                <td>1核</td>
+                <td>1G</td>
+            </tr>
+            <tr>
+                <td>61.191.61.92</td>
+                <td>2核</td>
+                <td>4G</td>
+            </tr>
+        </table>
+        <br/>
+        
+        <table border='1'>
+            <tr>
+                <th>IP</th>
+                <th>CPU</th>
+                <th>MEMORY</th>
+            </tr>
+            <tr>
+                <td>120.25.93.51</td>
+                <td>1核</td>
+                <td>1G</td>
+            </tr>
+            <tr>
+                <td>61.191.61.92</td>
+                <td>2核</td>
+                <td>4G</td>
+            </tr>
+        </table>
+        <br/>
+        
+        <table border='1'>
+            <thead>
+                <tr>
+                    <th>IP</th>
+                    <th>CPU</th>
+                    <th>MEMORY</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>120.25.93.51</td>
+                    <td>1核</td>
+                    <td>1G</td>
+                </tr>
+                <tr>
+                    <td>61.191.61.92</td>
+                    <td>2核</td>
+                    <td>4G</td>
+                </tr>
+            </tbody>
+        </table>
+        <br/>
+        
+        <table border='1'>
+            <tr>
+                <td>IP</td>
+                <td>CPU</td>
+                <td>MEMORY</td>
+            </tr>
+            <tr>
+                <td>120.25.93.51</td>
+                <td colspan='2'>1核</td>
+            </tr>
+            <tr>
+                <td>61.191.61.92</td>
+                <td>2核</td>
+                <td>4G</td>
+            </tr>
+        </table>
+        <br/>
+        
+        <table border='1'>
+            <tr>
+                <td>IP</td>
+                <td>CPU</td>
+                <td>MEMORY</td>
+            </tr>
+            <tr>
+                <td>120.25.93.51</td>
+                <td rowspan='2'>1核</td>
+                <td>1G</td>
+            </tr>
+            <tr>
+                <td>61.191.61.92</td>
+                <td>4G</td>
+            </tr>
+        </table>
+        <br/>
+        
+        <!--******************************************************************************************************-->
+        
+        <!--
+            当一组表单元素放到<fieldset>标签内时,浏览器会以特殊方式来显示它们
+            它们可能有特殊的边界,3D效果,或者甚至可创建一个子表单来处理这些元素
+        -->
+        <fieldset>
+            <legend>login</legend>
+                <form action='http://120.25.93.51/' method='POST'>
+                    <p>username: <input name='username' type='text'></p>
+                    <p>password: <input name='password' type='password'></p>
+                    <input type='submit' value='提交'>
+                </form>
+        </fieldset>
+        
+        <!--******************************************************************************************************-->
+    </body>
+</html>

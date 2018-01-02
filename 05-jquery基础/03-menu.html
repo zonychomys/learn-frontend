@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>03-menu</title>
+  <style>
+    ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .title {
+      display: block;
+      padding: 5px;
+      background-color: green;
+      width: 200px;
+      text-align: left;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    .content {
+      display: none;
+      padding: 5px;
+      background-color: lightgreen;
+      width: 200px;
+      font-size: 15px;
+      text-align: left;
+    }
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <ul>
+    <li>
+      <div class="title">用户管理</div>
+      <ul class="content">
+        <li><a href="#">用户</a></li>
+        <li><a href="#">用户组</a></li>
+      </ul>
+    </li>
+    <li>
+      <div class="title">资产管理</div>
+      <ul class="content">
+        <li><a href="#">主机</a></li>
+        <li><a href="#">主机组</a></li>
+      </ul>
+    </li>
+    <li>
+      <div class="title">权限管理</div>
+      <ul class="content">
+        <li><a href="#">系统用户</a></li>
+        <li><a href="#">授权规则</a></li>
+      </ul>
+    </li>
+  </ul>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script>
+  $(function() {
+    $(".title").click(function() {
+      // 当前title下content展开
+      //$(this).next().show()
+      // 其余title下content隐藏
+      //$(this).parent().siblings().children(".content").hide()
+      $(this).next().toggle("fast")
+      $(this).parent().siblings().children(".content").hide("fast")
+    })
+  })
+  </script>
+</body>
+</html>

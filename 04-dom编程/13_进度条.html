@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>13_进度条</title>
+    </head>
+    <body>
+        <div style='width:600px; height:20px; background-color:#ddd;'>
+            <div id='1' style='width:0%; height:20px; background-color:green;'></div>
+        </div>
+        <script>
+            function foo(tag){
+                var id_1_obj = document.getElementById(tag);
+                id_1_obj.style.width = parseInt(id_1_obj.style.width.substring(0,id_1_obj.style.width.length-1)) + 10 + '%';
+                console.log(id_1_obj.style.width);
+                if(id_1_obj.style.width.substring(0,id_1_obj.style.width.length-1) >= 100){
+                    clearInterval(interval_obj);
+                }
+            }
+            
+            interval_obj = setInterval("foo('1')", 500);
+        </script>
+    </body>
+</html>

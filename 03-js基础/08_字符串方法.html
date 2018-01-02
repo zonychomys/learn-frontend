@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>08_字符串方法</title>  
+    </head>
+    <body>
+        <script type='text/javascript'>
+            var foo = '    bar    ';
+            
+            // 去除字符串两端的空格
+            console.log(foo.trim());
+            
+            // 根据索引获取字符串中指定字符
+            console.log(foo.charAt(6));
+            
+            // 对字符串执行切片操作
+            console.log(foo.substring(2,6));
+            
+            // 查询某字符的索引,多个相同的字符取第一个索引
+            console.log(foo.indexOf('a'));
+            
+            // 获取字符串长度
+            console.log(foo.length);
+            
+            // 字符串转数字
+            var foo = '123';
+            console.log(foo);
+            console.log(parseInt(foo));
+        </script>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>12_搜索框</title>
+        
+        <style>
+            .gray {
+                color:gray;
+            }
+            .black {
+                color:black;
+            }
+        </style>
+    </head>
+    <body>
+        <input id='1' type='text' class='gray' value='请输入关键字' onfocus='enter();' onblur='leave();'/>
+        <script>
+            function enter() {
+                var id_1_obj = document.getElementById('1');
+                id_1_obj.className = 'black';
+                if(id_1_obj.value == '请输入关键字' || id_1_obj.value.trim() == ''){
+                    id_1_obj.value = '';
+                }
+            }
+            function leave() {
+                var id_1_obj = document.getElementById('1');
+                if(id_1_obj.value.length == 0 || id_1_obj.value.trim() == ''){
+                    id_1_obj.className = 'gray';
+                    id_1_obj.value = '请输入关键字';
+                }
+            }
+        </script>
+    </body>
+</html>

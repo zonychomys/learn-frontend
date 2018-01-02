@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8"/>
+        <title>09_position_fixed_relative_absolute</title>
+    </head>
+    
+    <body>
+        <!--  在浏览器顶部固定显示,不受页面上下滚动的影响,下面的例子展示一个常见的布局页面  -->
+        <!--
+        <div style='position:fixed;background-color:#999;height:45px;width:100%;top:0px'>顶部标签</div>
+        <div style='margin-top:45px'>
+            <div style='background-color:orange;position:fixed;top:50px;bottom:0px;width:30%;'>left</div>
+            <div style='margin-left:35%'>
+                <p>right</p><p>right</p><p>right</p><p>right</p><p>right</p><p>right</p>
+                <p>right</p><p>right</p><p>right</p><p>right</p><p>right</p><p>right</p>
+                <p>right</p><p>right</p><p>right</p><p>right</p><p>right</p><p>right</p>
+                <p>right</p><p>right</p><p>right</p><p>right</p><p>right</p><p>right</p>
+                <p>right</p><p>right</p><p>right</p><p>right</p><p>right</p><p>right</p>
+                <p>right</p><p>right</p><p>right</p><p>right</p><p>right</p><p>right</p>
+                <p>right</p><p>right</p><p>right</p><p>right</p><p>right</p><p>right</p>
+                <p>right</p><p>right</p><p>right</p><p>right</p><p>right</p><p>right</p>
+            </div>
+        </div>
+        -->
+        
+        <!--
+            position使用fixed选项时,top|right|bottom|left将会以整个浏览器作为外框
+            relative选项与absolute选项通常结合使用,relative用于定义外围相对外框,absolute其后定义的top|right|bottom|left将会以relative定义的外框作为基准
+        -->
+        <div style='width:800px;height:200px;position:relative;background-color:blue;'>
+            <div style='width:200px;position:absolute;top:10px;left:10px;bottom:10px;background-color:red;'></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>04_函数默认参数</title>  
+    </head>
+    <body>
+        <script type='text/javascript'>
+            // 函数声明
+            function Bar(name,age){
+                if(!arguments[0]){var name = 'baobao';}
+                if(!arguments[1]){var age = 1;}
+                console.log(name, age);
+            }
+            
+            Bar('foo','bar');
+            Bar();
+        </script>
+    </body>
+</html>

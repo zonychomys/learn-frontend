@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>03_dom选择器之name选择器</title>  
+    </head>
+    <body>
+        <div name='1'>修改前内容_0</div>
+        <div name='1'>修改前内容_1</div>
+        
+        <script type='text/javascript'>
+            // name选择器,通过如下方法获取某个匹配特定name的标签对象,并在之后修改标签对象属性
+            // 注意: getElementsByName方法返回的是一个包含所有匹配项的数组,因此无法直接对数组使用innerText等方法
+            var tag_name_1_list = document.getElementsByName('1');
+            console.log(tag_name_1_list);
+            for(var item in tag_name_1_list) {
+                tag_name_1_list[item].innerText = '修改后内容' + item;
+            }
+        </script>
+    </body>
+</html>

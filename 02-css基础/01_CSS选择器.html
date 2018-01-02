@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <title>css</title>
+        
+        <!--  方式一: 外部引入,通过在head标签中引用外部css样式文件,并在之后的body标签中引用  -->
+        <link rel='stylesheet' href='css/common.css'/>
+        
+        <!--  方式二: 页面嵌入,在style标签中定义css样式,并在之后的body标签中引用  -->
+        
+        <style type='text/css'>       
+            /*
+                class选择器: 通过在标签中指定class属性进行引用。
+                引用示例: <div class='style_1'>some things</div>
+            */
+            .style_1{
+                background-color:red;
+                font-size:20px;
+            }
+            
+            /*
+                id选择器: 通过在标签中指定id属性进行引用。
+                引用示例: <div id='style_2'>some things</div>
+            */
+            #style_2{
+                background-color:orange;
+                font-size:20px;
+            }
+            
+            /*
+                标签选择器: 对于特定的标签应用该样式。
+                引用示例: <h2>some things</h2>
+            */
+            h2{
+                background-color:yellow;
+                font-size:20px;
+            }
+            
+            /*
+                组合选择器: 对于列出的组合中的全部标签应用该样式。
+                引用示例: <h3>some things</h3>或<h4>some things</h4>
+            */
+            h3,h4{
+                background-color:green;
+                font-size:20px;
+            }
+            
+            /*
+                关联选择器: 对于满足此处定义的层级关系的最内层标签应用该样式。
+                引用示例: <div><h5>some things</h5></div>
+            */
+            div h5{
+                background-color:blue;
+                font-size:20px;
+            }          
+            
+            /*
+                属性选择器: 对于标签中匹配特定属性的元素应用该样式。
+                引用示例: <input type='text'>
+            */
+            input[type='text']{
+                background-color:cyan;
+                font-size:20px;
+                width:1920px;
+                height:20px;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <!--  方式三: 元素内联,直接在标签中指定样式  -->
+        <div style='background-color:black;font-size:20px;'>div标签</div>
+        
+        <!--  class选择器  -->
+        <div class='style_0'>div标签 class</div>
+        
+        <!--  class选择器  -->
+        <div class='style_1'>div标签 class</div>
+        
+        <!--  id选择器  -->
+        <div id='style_2'>div标签 id</div>
+        
+        <!--  标签选择器  -->
+        <h2>h2标签</h2>
+        
+        <!--  组合选择器  -->
+        <h3>h3标签</h3>
+        <h4>h4标签</h4>
+        
+        <!--  关联选择器  -->
+        <h5>h5标签</h5>
+        <div>
+            <h5>div中的h5标签</h5>
+        </div>
+        
+        <!--  属性选择器  -->
+        <input type='text'/>        
+    </body>
+</html>
